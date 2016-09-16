@@ -1,12 +1,12 @@
 var express = require('express')
 
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = 8080;
 
 var todos = [{
-	id:1,
-	description:'haiiii',
-	completed:false
+	"id":1,
+	"description":'haiiii',
+	"completed":false
 },{
 	id:2,
 	description:'haiii2',
@@ -48,7 +48,7 @@ app.get('/todos/:id', function(req, res){
 	}else{
 		res.status(404).send();
 	}
-	res.send('asking todo for id  ' +req.params.id);
+	//res.send('asking todo for id  ' +req.params.id);
 });
 
 app.listen(PORT, function(){
